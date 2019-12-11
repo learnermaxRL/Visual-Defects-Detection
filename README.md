@@ -22,6 +22,11 @@ The experimentation and results were done in controlled environment since it is 
 
 python run_demo.py <path to good samples folder> <path to image which is to be analyzed for anomaly>
 (use -h flag for help on args)
+  
+ **Output**
+
+The code will output an image which will contain red regions indicating that their is an anomaly present,more often than not this may also contain regions of anomaly(the areas which didnt match),however in case of very apparent defects it may show more regions since it couldnt match properly.Apart from this it will output the "good or bad" in console.
+In other case it can directly output "bad image" if the model is unable to find a suitable match for the current image in good folder
 
 **Sample Detections**
 ![sample detection1 ](https://github.com/learnermaxRL/AnomalyDetection/blob/master/media/def1.png)

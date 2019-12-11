@@ -2,7 +2,9 @@
 # quqixun@gmail.com
 # 2017/04/10
 #
-
+#Modified by Mayank Sharma
+#sharma.mayank2125@gmail.com
+#2019/12/05
 
 import numpy as np
 from affine_ransac import Ransac
@@ -66,21 +68,6 @@ A_rsc, t_rsc, inliers = rs.ransac_fit(pts_s, pts_t)
 # Test Class Align
 # -------------------------------------------------------------
 
-# Load source image and target image
-
-
-
-
-
-
-# source_path = '/home/jbmai/Documents/J2 Images New Set up At 230 mm Height-20191014T075417Z-002/J2 Images New Set up At 230 mm Height/YJC-62316/Good/62316-01.tif'
-# target_path = '/home/jbmai/Documents/J2 Images New Set up At 230 mm Height-20191014T075417Z-002/J2 Images New Set up At 230 mm Height/YJC-62316/Good/62316-04.tif'
-
-# # Create instance
-# al = Align(source_path, target_path, threshold=1)
-
-# # Image transformation
-# al.align_image()
 al = Align(threshold=1)
 
 def drawContours(image,bin_roi):
@@ -184,10 +171,6 @@ if __name__ == "__main__":
     parser.add_argument('BadImagePath', type=str, help='Image which needs to be checked')
 
     args = parser.parse_args()
-
-
-    # defectFile = "/home/jbmai/Documents/N5_14thoct/N5 Images New Set Up 230 mm Height/YE3-K10-58619/GOOD/YE3-K10-58619-12.tif"
-    # good_folders = "/home/jbmai/Documents/N5_14thoct/N5 Images New Set Up 230 mm Height/YE3-K10-58619/GOOD"
 
     good_folders = args.goodImagesDir
     defectFile = args.BadImagePath

@@ -65,19 +65,6 @@ A_rsc, t_rsc, inliers = rs.ransac_fit(pts_s, pts_t)
 
 # Load source image and target image
 
-
-
-
-
-
-# source_path = '/home/jbmai/Documents/J2 Images New Set up At 230 mm Height-20191014T075417Z-002/J2 Images New Set up At 230 mm Height/YJC-62316/Good/62316-01.tif'
-# target_path = '/home/jbmai/Documents/J2 Images New Set up At 230 mm Height-20191014T075417Z-002/J2 Images New Set up At 230 mm Height/YJC-62316/Good/62316-04.tif'
-
-# # Create instance
-# al = Align(source_path, target_path, threshold=1)
-
-# # Image transformation
-# al.align_image()
 al = Align(threshold=1)
 
 def findAggregratedComparision(good_folders,defectFile):
@@ -128,14 +115,6 @@ def findAggregratedComparision(good_folders,defectFile):
     cv2.imshow('img_commonssss', next_img)
     cv2.waitKey(0) 
 
-
-
-
-
-
-
-defectFile = "/home/jbmai/Documents/N5_14thoct/N5 Images New Set Up 230 mm Height/28.09.19 Defective Part Images/58276/Bad/58276-Hole Shift.tif"
-good_folders = "/home/jbmai/Documents/N5_14thoct/N5 Images New Set Up 230 mm Height/28.09.19 Defective Part Images/58276/Good"
-
-findAggregratedComparision(good_folders,defectFile)
+if __name__ == "__main__":
+    findAggregratedComparision(good_folders,defectFile)
 

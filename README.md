@@ -1,4 +1,4 @@
-# AnomalyDetection
+# Defect Detection
 This repo contains code to detect anonmaly by comparing an image with its golden refrences/template matching,originally working on automotive parts,but should be able to generalize well accross other domains.
 The experimentation and results were done in controlled environment since it is meant to be used in industrial applications.
 

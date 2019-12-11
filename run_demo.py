@@ -108,6 +108,8 @@ def findAggregratedComparision(good_folders,defectFile):
     next_img = None
 
     images = [item for sublist in [glob.glob(good_folders + ext) for ext in ["/*.jpeg", "/*.jpg","/*.tif","/*.png"]] for item in sublist]
+
+
     
     bad_file = defectFile
 

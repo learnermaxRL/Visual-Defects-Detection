@@ -17,6 +17,7 @@ from scipy.stats import norm
 from multiprocessing import Pool, TimeoutError
 from itertools import product
 import argparse
+import os
 
 
 
@@ -106,13 +107,7 @@ def findAggregratedComparision(good_folders,defectFile):
 
     next_img = None
 
-
-    
-    
-#     images = glob.glob(good_folders+'/*.tif')
-    images = []
-    for ext in ('*.tiff', '*.png', '*.jpg','*.jpeg'):
-       images.extend(glob(join(goo_folders, ext)))
+    images = [item for sublist in [glob.glob(good_folders + ext) for ext in ["/*.jpeg", "/*.jpg","/*.tif","/*.png"]] for item in sublist]
     
     bad_file = defectFile
 

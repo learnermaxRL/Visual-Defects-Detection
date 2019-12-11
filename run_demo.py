@@ -107,8 +107,13 @@ def findAggregratedComparision(good_folders,defectFile):
     next_img = None
 
 
-
-    images = glob.glob(good_folders+'/*.tif')
+    
+    
+#     images = glob.glob(good_folders+'/*.tif')
+    images = []
+    for ext in ('*.tiff', '*.png', '*.jpg','*.jpeg'):
+       images.extend(glob(join(goo_folders, ext)))
+    
     bad_file = defectFile
 
 
